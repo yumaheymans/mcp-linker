@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.milisp.mcp-linker/yap",
+  "title": "Yap",
+  "description": "Transcribe local audio and video files on your computer and search your Yap dictations",
+  "version": "1.0.0",
+  "websiteUrl": "https://yapapp.cc/mcp",
+  "repository": {
+    "url": "https://github.com/founden-bot/yap-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/milisp/mcp-linker@main/registry/icons/yap.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "github:founden-bot/yap-mcp",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "io.github.milisp.mcp-linker": {
+        "configName": "yap",
+        "category": "Design & Media",
+        "official": true,
+        "fullDescription": "Open-source (MIT) stdio server with three tools: transcribe_audio (a local audio or video file to text, 25 European languages, optional timestamps), search_dictations (read-only search of the history the Yap desktop app keeps on this computer) and prepare_speech_model. Speech recognition runs on the CPU with NVIDIA Parakeet through sherpa-onnx; audio is not uploaded and no API key or account is needed. It reads the audio paths you give it and opens the Yap history database read-only. The only network use is a one-time, checksum-verified download of the speech model (about 670 MB) from Hugging Face. Requires Node.js 20+."
+      }
+    }
+  }
+}
